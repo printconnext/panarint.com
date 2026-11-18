@@ -104,8 +104,6 @@ p { margin: 0 0 var(--space-2); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* ---------- Hero ---------- */
-.damask { position: relative; isolation: isolate; }
-.damask::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0.08; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23e0c870' stroke-width='1.4'%3E%3Cpath d='M60 10c10 14 22 18 22 34S70 66 60 70C50 66 38 60 38 44S50 24 60 10z'/%3E%3Cpath d='M60 70v40M44 92c8-6 24-6 32 0M0 60c14 0 20 10 20 20M120 60c-14 0-20 10-20 20'/%3E%3Ccircle cx='60' cy='44' r='6'/%3E%3C/g%3E%3C/svg%3E"); background-size: 120px 120px; }
 .hero { background: linear-gradient(160deg, var(--royal-600) 0%, var(--ink) 55%, var(--portrait-navy) 100%); color: var(--white); overflow: hidden; }
 .hero__inner { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: var(--space-5); padding-block: var(--space-8); }
 .hero h1 { color: var(--white); margin-bottom: var(--space-2); }
