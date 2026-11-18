@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# One canonical host: https://www.panarint.com
+RewriteCond %{HTTP_HOST} ^panarint\.com$ [NC]
+RewriteRule ^(.*)$ https://www.panarint.com/$1 [R=301,L]
+
+# Source files and repo metadata are not part of the public site
+RewriteRule ^(tools|\.git)(/|$) - [R=404,L]
+RewriteRule ^(README\.md|\.gitignore|\.gitattributes|\.htaccess)$ - [R=404,L]
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
